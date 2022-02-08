@@ -32,7 +32,7 @@ $(document).ready(function(){
   
  
   //test get call
-  $.get('/projects',(result) => {
+  $.get('/api/projects',(result) => {
     for (let project of result){
       $('#projects').append(createProjectCard(project));
     }
@@ -49,7 +49,7 @@ $(document).ready(function(){
       
     };
     var settings = {
-      "url": "/projects",
+      "url": "/api/projects",
       "method": "POST",
       "timeout": 0,
       "headers": {
